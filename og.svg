@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17324d"/>
+      <stop offset="1" stop-color="#244865"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="40" fill="url(#bg)"/>
+  <circle cx="1060" cy="90" r="210" fill="#23867b" opacity=".88"/>
+  <circle cx="1090" cy="560" r="185" fill="#f28a52" opacity=".92"/>
+  <circle cx="905" cy="535" r="86" fill="#f4c95d"/>
+  <rect x="72" y="68" width="320" height="52" rx="16" fill="#23867b"/>
+  <text x="232" y="103" fill="#fff" text-anchor="middle" font-size="26" font-weight="700" font-family="PingFang TC,Microsoft JhengHei,sans-serif">三上跨領域｜遊戲式自學</text>
+  <text x="72" y="238" fill="#fff" font-size="76" font-weight="900" font-family="PingFang TC,Microsoft JhengHei,sans-serif">課間十分鐘</text>
+  <text x="72" y="330" fill="#fff" font-size="76" font-weight="900" font-family="PingFang TC,Microsoft JhengHei,sans-serif">共好實驗室</text>
+  <text x="76" y="406" fill="#f4c95d" font-size="34" font-weight="700" font-family="PingFang TC,Microsoft JhengHei,sans-serif">看見需求 × 用資料判斷 × 形成共好約定</text>
+  <g transform="translate(78 476)">
+    <rect width="176" height="62" rx="18" fill="#fff" opacity=".96"/>
+    <rect x="194" width="176" height="62" rx="18" fill="#fff" opacity=".96"/>
+    <rect x="388" width="176" height="62" rx="18" fill="#fff" opacity=".96"/>
+    <text x="88" y="40" text-anchor="middle" fill="#17324d" font-size="24" font-weight="800" font-family="PingFang TC,Microsoft JhengHei,sans-serif">第 1 關｜概念</text>
+    <text x="282" y="40" text-anchor="middle" fill="#17324d" font-size="24" font-weight="800" font-family="PingFang TC,Microsoft JhengHei,sans-serif">第 2 關｜策略</text>
+    <text x="476" y="40" text-anchor="middle" fill="#17324d" font-size="24" font-weight="800" font-family="PingFang TC,Microsoft JhengHei,sans-serif">第 3 關｜檢核</text>
+  </g>
+</svg>
