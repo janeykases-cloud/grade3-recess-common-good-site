@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17324d">
+  <meta name="description" content="三年級跨領域遊戲式自學網站：用證據、資料與友善表達，完成課間十分鐘共好任務。">
+  <link rel="icon" href="./og.svg" type="image/svg+xml">
+  <meta property="og:title" content="課間十分鐘共好實驗室｜三年級">
+  <meta property="og:description" content="三關遊戲式任務：複習概念、操作探究策略、完成 10 題共好檢核。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://janeykases-cloud.github.io/grade3-recess-common-good-site/">
+  <meta property="og:image" content="https://janeykases-cloud.github.io/grade3-recess-common-good-site/og.png">
+  <title>課間十分鐘共好實驗室｜三年級</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="回到首頁">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span><strong>共好探險隊</strong><small>三上跨領域自學任務</small></span>
+    </a>
+    <div class="header-tools">
+      <span class="xp-badge" aria-live="polite">能量 <strong id="xp-count">0</strong> XP</span>
+      <button class="ghost-button" id="reset-progress" type="button">重新開始</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="screen hero-screen active" id="home" data-screen="home" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">課間島緊急任務</p>
+          <h1 id="hero-title">課間十分鐘<br><span>共好實驗室</span></h1>
+          <p class="hero-lead">下課時，有人想跑跳，有人想聊天，也有人想安靜休息。你能用證據、資料與友善表達，找到讓大家都安心的方法嗎？</p>
+          <div class="name-panel">
+            <label for="student-name">探險隊員姓名</label>
+            <div class="name-row">
+              <input id="student-name" maxlength="12" autocomplete="name" placeholder="請輸入姓名或暱稱">
+              <button class="primary-button" id="start-adventure" type="button">開始闖關 <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="privacy-note">姓名與進度只保存在這台裝置，用來製作闖關證書；最長保留 365 天，可隨時按「重新開始」清除。</p>
+          </div>
+        </div>
+        <div class="hero-scene" role="img" aria-label="四位學生在校園中進行跑跳、聊天、閱讀與散步活動">
+          <div class="island-sign">課間島</div>
+          <div class="scene-character runner"><span>🏀</span><b>小宇</b><small>想跑跳</small></div>
+          <div class="scene-character chatter"><span>💬</span><b>小晴</b><small>想聊天</small></div>
+          <div class="scene-character reader"><span>📖</span><b>阿哲</b><small>想閱讀</small></div>
+          <div class="scene-character walker"><span>🚶</span><b>小安</b><small>慢慢走</small></div>
+          <div class="path-line" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="mission-preview" aria-label="三個關卡預覽">
+        <article><span>01</span><div><b>概念補給站</b><small>找事實、看需求、讀資料</small></div></article>
+        <article><span>02</span><div><b>三節策略實驗室</b><small>文氏圖、光譜、鑽石分層</small></div></article>
+        <article><span>03</span><div><b>共好守護者檢核</b><small>10 題成果挑戰</small></div></article>
+      </div>
+    </section>
+
+    <section class="screen map-screen" id="map" data-screen="map" aria-labelledby="map-title">
+      <div class="section-heading">
+        <p class="eyebrow">學習地圖</p>
+        <h2 id="map-title"><span id="map-name">探險隊員</span>，準備好解鎖課間島了嗎？</h2>
+        <p>每一關都要完成任務才能取得證書，前一關成功後才會開啟下一關。</p>
+      </div>
+      <div class="level-map">
+        <button class="level-node" data-go="level1" data-level="1" type="button">
+          <span class="node-status" aria-hidden="true">🔍</span>
+          <span class="node-number">第 1 關</span>
+          <strong>概念補給站</strong>
+          <small>4 個暖身任務</small>
+          <em>開始探索</em>
+        </button>
+        <div class="map-route" aria-hidden="true"><span></span><span></span><span></span></div>
+        <button class="level-node locked" data-go="level2" data-level="2" type="button" disabled>
+          <span class="node-status" aria-hidden="true">🧭</span>
+          <span class="node-number">第 2 關</span>
+          <strong>三節策略實驗室</strong>
+          <small>圖文情境 × 互動工具</small>
+          <em>尚未解鎖</em>
+        </button>
+        <div class="map-route" aria-hidden="true"><span></span><span></span><span></span></div>
+        <button class="level-node locked" data-go="level3" data-level="3" type="button" disabled>
+          <span class="node-status" aria-hidden="true">🏅</span>
+          <span class="node-number">第 3 關</span>
+          <strong>共好守護者檢核</strong>
+          <small>10 題成果挑戰</small>
+          <em>尚未解鎖</em>
+        </button>
+      </div>
+      <div class="map-summary">
+        <div><span id="completed-count">0</span><small>已完成關卡</small></div>
+        <div><span id="certificate-count">0</span><small>完整通關證書</small></div>
+        <div><span id="best-score">—</span><small>終極檢核最高分</small></div>
+      </div>
+    </section>
+
+    <section class="screen" id="level1" data-screen="level1" aria-labelledby="level1-title">
+      <div class="level-topbar">
+        <button class="back-button" data-go="map" type="button">← 學習地圖</button>
+        <span>第 1 關｜概念補給站</span>
+        <div class="mini-progress"><span id="l1-progress"></span></div>
+      </div>
+      <div class="section-heading compact">
+        <p class="eyebrow">先補充四種探究能量</p>
+        <h2 id="level1-title">看清楚，再做決定</h2>
+        <p>先讀概念卡，再完成每張卡下方的挑戰。答錯會得到提示，可以重新作答。</p>
+      </div>
+      <div class="concept-grid" id="concept-grid"></div>
+      <div class="level-actions">
+        <p id="level1-status" class="status-message" aria-live="polite">完成 4 個概念任務，就能開啟第 2 關。</p>
+        <button class="primary-button" id="finish-level1" type="button" disabled>完成第 1 關</button>
+      </div>
+      <div class="success-panel" id="level1-success" hidden></div>
+    </section>
+
+    <section class="screen" id="level2" data-screen="level2" aria-labelledby="level2-title">
+      <div class="level-topbar">
+        <button class="back-button" data-go="map" type="button">← 學習地圖</button>
+        <span>第 2 關｜三節策略實驗室</span>
+        <div class="mini-progress"><span id="l2-progress"></span></div>
+      </div>
+      <div class="section-heading compact">
+        <p class="eyebrow">學習情境</p>
+        <h2 id="level2-title">同一個下課，怎麼讓大家都安心？</h2>
+        <p>課間島只有 10 分鐘，走廊、教室和器材都是大家共用的。請跟著三節課的策略，一步步找出共好方法。</p>
+      </div>
+
+      <div class="story-strip" aria-label="課間島四位角色的圖文情境">
+        <article><span class="story-icon">🏀</span><b>小宇｜動態活動</b><p>拿著球快步走出教室，轉過走廊時差點碰到同學。</p></article>
+        <article><span class="story-icon">💬</span><b>小晴｜聊天活動</b><p>和兩位同學在教室後方聊天，說話聲讓旁邊閱讀的同學抬起頭。</p></article>
+        <article><span class="story-icon">📖</span><b>阿哲｜安靜活動</b><p>坐在閱讀角看書，聽到碰撞聲後，把書輕輕移到安靜的角落。</p></article>
+        <article><span class="story-icon">🚶</span><b>小安｜慢行需求</b><p>走廊人很多，小安慢慢走，等前面的同學通過後才繼續前進。</p></article>
+      </div>
+
+      <nav class="lesson-tabs" aria-label="三節課策略任務">
+        <button class="lesson-tab active" data-lesson="lesson-a" type="button">第一節｜看見需求</button>
+        <button class="lesson-tab" data-lesson="lesson-b" type="button" disabled>第二節｜用資料判斷</button>
+        <button class="lesson-tab" data-lesson="lesson-c" type="button" disabled>第三節｜形成約定</button>
+      </nav>
+
+      <article class="lesson-panel active" id="lesson-a">
+        <div class="lesson-banner teal">
+          <span class="lesson-illustration" aria-hidden="true">👀</span>
+          <div><small>第一節課策略</small><h3>證據偵探 × 角色配對 × 文氏圖</h3><p>先分清楚事實和推想，再比較不同活動的需求。</p></div>
+        </div>
+        <div class="knowledge-row">
+          <div><span>1</span><b>事實有證據</b><p>能在圖或文字裡直接找到。</p></div>
+          <div><span>2</span><b>推想要再查</b><p>「故意」「自私」不是眼前的事實。</p></div>
+          <div><span>3</span><b>不同不等於衝突</b><p>先看見需求，再找共同條件。</p></div>
+        </div>
+        <section class="game-card" aria-labelledby="evidence-title">
+          <div class="game-card-title"><span>任務 A</span><h4 id="evidence-title">證據掃描器</h4><p>判斷每一句是「事實」或「推想／意見」。</p></div>
+          <div id="evidence-game" class="choice-list"></div>
+          <button class="check-button" id="check-evidence" type="button">啟動掃描</button>
+          <p class="feedback" id="evidence-feedback" aria-live="polite"></p>
+        </section>
+        <section class="game-card" aria-labelledby="match-title">
+          <div class="game-card-title"><span>任務 B</span><h4 id="match-title">角色需求配對</h4><p>幫四位角色找到最需要的支持。</p></div>
+          <div id="match-game" class="match-grid"></div>
+          <button class="check-button" id="check-match" type="button">檢查配對</button>
+          <p class="feedback" id="match-feedback" aria-live="polite"></p>
+        </section>
+        <section class="game-card" aria-labelledby="venn-title">
+          <div class="game-card-title"><span>任務 C</span><h4 id="venn-title">文氏圖概念搬運</h4><p>從概念銀行庫拖曳圖卡，放到動態活動、兩者共同需要或安靜活動區。</p></div>
+          <div id="venn-game" class="venn-game"></div>
+          <button class="check-button" id="check-venn" type="button">檢查文氏圖</button>
+          <p class="feedback" id="venn-feedback" aria-live="polite"></p>
+        </section>
+        <button class="primary-button lesson-complete" id="complete-a" type="button" disabled>完成第一節策略</button>
+      </article>
+
+      <article class="lesson-panel" id="lesson-b">
+        <div class="lesson-banner blue">
+          <span class="lesson-illustration" aria-hidden="true">📊</span>
+          <div><small>第二節課策略</small><h3>資料表 × 方案光譜 × 反思句型</h3><p>資料幫我們看見現況，選擇還要考慮可能影響。</p></div>
+        </div>
+        <div class="data-lab">
+          <div class="data-table-wrap">
+            <h4>8 人活動偏好</h4>
+            <table><thead><tr><th>活動</th><th>人數</th></tr></thead><tbody><tr><td>跑跳或球類</td><td>3</td></tr><tr><td>聊天或桌遊</td><td>2</td></tr><tr><td>閱讀或休息</td><td>2</td></tr><tr><td>散步或透氣</td><td>1</td></tr></tbody></table>
+          </div>
+          <div class="bar-chart" role="img" aria-label="一週課間問題次數：碰撞 4 次、器材爭用 3 次、音量影響 2 次、未收拾 3 次">
+            <h4>一週問題紀錄</h4>
+            <div><b>碰撞</b><span style="--value:4">4</span></div>
+            <div><b>器材爭用</b><span style="--value:3">3</span></div>
+            <div><b>音量影響</b><span style="--value:2">2</span></div>
+            <div><b>未收拾</b><span style="--value:3">3</span></div>
+          </div>
+        </div>
+        <section class="game-card" aria-labelledby="data-title">
+          <div class="game-card-title"><span>任務 D</span><h4 id="data-title">資料偵探</h4><p>用表格和統計圖回答，不靠猜測。</p></div>
+          <div id="data-game" class="quiz-mini"></div>
+          <button class="check-button" id="check-data" type="button">提交資料發現</button>
+          <p class="feedback" id="data-feedback" aria-live="polite"></p>
+        </section>
+        <section class="game-card" aria-labelledby="spectrum-title">
+          <div class="game-card-title"><span>任務 E</span><h4 id="spectrum-title">方案光譜</h4><p>從方案字卡銀行庫拖曳字卡，放到「很適合、需要修改、不適合」光譜區。</p></div>
+          <div id="spectrum-game" class="spectrum-game"></div>
+          <button class="check-button" id="check-spectrum" type="button">檢查光譜</button>
+          <p class="feedback" id="spectrum-feedback" aria-live="polite"></p>
+        </section>
+        <section class="game-card reflection-card" aria-labelledby="reflection-title">
+          <div class="game-card-title"><span>任務 F</span><h4 id="reflection-title">想法轉彎處</h4><p>補完句子，留下你的判斷歷程。</p></div>
+          <label>我原本認為 <input id="reflection-before" placeholder="例如：大家都去走廊玩"></label>
+          <label>後來因為 <input id="reflection-reason" placeholder="例如：碰撞紀錄最多"></label>
+          <label>所以我決定 <select id="reflection-decision"><option value="">請選擇</option><option>改變原本的想法</option><option>保留原本的想法</option></select></label>
+          <button class="check-button" id="check-reflection" type="button">完成反思</button>
+          <p class="feedback" id="reflection-feedback" aria-live="polite"></p>
+        </section>
+        <button class="primary-button lesson-complete" id="complete-b" type="button" disabled>完成第二節策略</button>
+      </article>
+
+      <article class="lesson-panel" id="lesson-c">
+        <div class="lesson-banner orange">
+          <span class="lesson-illustration" aria-hidden="true">💎</span>
+          <div><small>第三節課策略</small><h3>鑽石分層 × 共好約定 × 三條件檢核</h3><p>重要不只看喜歡，還要說明取捨與照顧的需求。</p></div>
+        </div>
+        <section class="game-card" aria-labelledby="diamond-title">
+          <div class="game-card-title"><span>任務 G</span><h4 id="diamond-title">鑽石分層挑戰</h4><p>從概念銀行庫拖曳 9 張行動卡，放入 1—2—3—2—1 的鑽石分層位置。</p></div>
+          <div id="diamond-game" class="diamond-game"></div>
+          <button class="check-button" id="check-diamond" type="button">檢查分層</button>
+          <p class="feedback" id="diamond-feedback" aria-live="polite"></p>
+        </section>
+        <section class="game-card" aria-labelledby="agreement-title">
+          <div class="game-card-title"><span>任務 H</span><h4 id="agreement-title">共好約定組裝器</h4><p>選出 3 項行動，完成一條清楚、可行、能照顧大家的約定。</p></div>
+          <div id="agreement-options" class="agreement-options"></div>
+          <div class="agreement-builder">
+            <label>時間／地點<select id="agreement-where"><option value="">請選擇</option><option>下課時，在走廊</option><option>下課時，在教室</option><option>上課鐘響前</option></select></label>
+            <label>友善語氣<select id="agreement-tone"><option value="">請選擇</option><option>請大家一起</option><option>我們可以</option><option>需要時，記得</option></select></label>
+          </div>
+          <div class="three-checks">
+            <label><input type="checkbox" id="check-clear"> 說得清楚</label>
+            <label><input type="checkbox" id="check-doable"> 真的做得到</label>
+            <label><input type="checkbox" id="check-care"> 能照顧大家</label>
+          </div>
+          <button class="check-button" id="check-agreement" type="button">檢查共好約定</button>
+          <p class="feedback" id="agreement-feedback" aria-live="polite"></p>
+        </section>
+        <button class="primary-button lesson-complete" id="complete-c" type="button" disabled>完成第三節策略</button>
+      </article>
+
+      <div class="success-panel" id="level2-success" hidden></div>
+    </section>
+
+    <section class="screen" id="level3" data-screen="level3" aria-labelledby="level3-title">
+      <div class="level-topbar">
+        <button class="back-button" data-go="map" type="button">← 學習地圖</button>
+        <span>第 3 關｜共好守護者終極檢核</span>
+        <div class="mini-progress"><span id="l3-progress"></span></div>
+      </div>
+      <div class="section-heading compact">
+        <p class="eyebrow">最後 10 題</p>
+        <h2 id="level3-title">帶著證據、資料和共好判準出發</h2>
+        <p>每題選一個答案，全部完成後再送出。答對 8 題就能成為「課間共好守護者」。</p>
+      </div>
+      <form id="final-quiz" class="final-quiz"></form>
+      <div class="level-actions">
+        <p id="quiz-status" class="status-message" aria-live="polite">尚未作答。</p>
+        <button class="primary-button" id="submit-quiz" type="button">送出 10 題答案</button>
+      </div>
+      <div id="quiz-result" class="quiz-result" hidden></div>
+      <div class="success-panel grand" id="level3-success" hidden></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+  <footer>
+    <p>三年級｜課間十分鐘共好實驗室</p>
+    <p>在這個網站中，沒有公開排行榜；答錯只是找到下一個線索。</p>
+  </footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
